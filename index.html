@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Max Bělunek</title>
+        <link rel="stylesheet" href="styles.css" />
+        </head>
+    <body>
+
+        <header class="hero">
+            <h1>Max Bělunek</h1>
+            <p>Student & Game Developer</p>
+            <button id="scrollBtn">Více o mně ↓</button>
+        </header>
+
+        <section id="about">
+        <h2>O mně</h2>
+            <p>
+                Jsem začínající developer se zaměřením na hry a aplikace.
+                Pracuji s HTML, CSS, JavaScriptem, Pythonem, Javou a Unity.
+            </p>
+        </section>
+
+        <section id="projects">
+        <h2>Projekty</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <h3>JavaScript 3D Hra</h3>
+                    <p>Jednoduchá 3D hra za pomocí frameworku Three.js.</p>
+                    <button>Zjistit více --></button>
+                </div>
+                <div class="project">
+                    <h3>The Shimmer - Unity 2D hra</h3>
+                    <p>V průběhu tvorby...</p>
+                    <button>Zjistit více --></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Kontakt</h2>
+
+            <form action="https://formspree.io/f/mwvkdaag" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label>Váš email:</label>
+                    <input type="email" name="email" required placeholder="vas@email.cz">
+                </div>
+                <div class="form-group">
+                    <label>Vaše zpráva:</label>
+                    <textarea name="message" rows="5" required placeholder="Zde napište zprávu..."></textarea>
+                </div>
+                
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" class="submit-btn">Odeslat</button>
+            </form>
+
+            <p id="contact-breaker">-------nebo-------</p>
+
+            <p>Email: <a href="mailto:belunekmax@gmail.com">belunekmax@gmail.com</a></p>
+            <p>GitHub: <a href="#">github.com/maxikbe</a></p>
+        </section>
+
+        <footer>
+            <p>© 2025 Maxi</p>
+        </footer>
+
+        <script src="index.js"></script>
+    </body>
+</html>
