@@ -257,3 +257,8 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
+.Changes-holder{
+  flex-direction: row;
+  display: flex;
+}
