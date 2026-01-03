@@ -8,13 +8,45 @@
 </head>
 <body>
     <nav class="navigation-bar">
-            <a href="index.html">Max Bělunek</a>
-            <div class="Changes-holder">
-                <button id="theme-toggle" data-key="themeBtnLight">Světlý Režim</button>
-                <p>-</p>
-                <button id="language-change">CZ</button>
-            </div>
-        </nav>
+        <a href="index.html">Max Bělunek</a>
+        <div class="Changes-holder">
+            <button id="theme-toggle" data-key="themeBtnLight">Světlý Režim</button>
+            <p>-</p>
+            <button id="language-change">CZ</button>
+        </div>
+    </nav>
+    <header class="hero projecthero">
+        <h1>The Shimmer</h1>
+        <p data-key="ProjectDesc2">2D hra v Unity</p>
+        <a href="#about" id="scrollBtn" data-key="project1ScrollButton">Více o projektu ↓</a>
+    </header>
+    <section id="about">
+        <h2 data-key="aboutProjectTitle">O projektu</h2>
+        <p data-key="aboutProjectP2_1">
+            Školní práce mě a mých kamarádů v Unity.
+        </p>
+        <p data-key="aboutProjectP2_2">
+            Jedná se o 2D hru podle filmu Anihilace.
+        </p>
+        <span data-key="aboutProjectP2_3"> 
+            Hra je momentálně ve vývoji, který můžete sledovat
+        </span>
+        <a data-key="moreInfo" href="https://github.com/maxikbe/TheShimmer" target="_blank">zde</a>
+        <span>.</span>
+    </section>
+    <section id="projects">
+        <h2 data-key="imageProjectTitle">Galerie</h2>
+        <div class="project-grid">
+            <p data-key="emptySpace">Zatím tu nic není.</p>
+        </div>
+    </section>
+    <footer>
+        <p>© 2026 Max Bělunek</p>
+    </footer>
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFull">
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

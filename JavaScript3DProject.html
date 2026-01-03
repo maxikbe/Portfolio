@@ -8,13 +8,49 @@
 </head>
 <body>
     <nav class="navigation-bar">
-            <a href="index.html">Max Bělunek</a>
-            <div class="Changes-holder">
-                <button id="theme-toggle" data-key="themeBtnLight">Světlý Režim</button>
-                <p>-</p>
-                <button id="language-change">CZ</button>
-            </div>
-        </nav>
+        <a href="index.html">Max Bělunek</a>
+        <div class="Changes-holder">
+            <button id="theme-toggle" data-key="themeBtnLight">Světlý Režim</button>
+            <p>-</p>
+            <button id="language-change">CZ</button>
+        </div>
+    </nav>
+    <header class="hero projecthero">
+        <h1>Average Day At CHC</h1>
+        <p data-key="ProjectDesc1">3D hra v JavaScriptu</p>
+        <a href="#about" id="scrollBtn" data-key="project1ScrollButton">Více o projektu ↓</a>
+    </header>
+    <section id="about">
+        <h2 data-key="aboutProjectTitle">O projektu</h2>
+        <p data-key="aboutProjectP1_1">
+            Moje školní práce v JavaScriptu.
+        </p>
+        <p data-key="aboutProjectP1_2">
+            Jedná se o jednodouchou 3D hru v naší škole Creative Hill College.
+        </p>
+        <span data-key="aboutProjectP1_3"> 
+            Hru si můžete zahrát
+        </span>
+        <a data-key="moreInfo" href="https://maxikbe.github.io/AverageDayAtCHC/" target="_blank">zde</a>
+        <span>.</span>
+        <p data-key="aboutProjectP1_4"> 
+            Všechnu grafiku použitou ve hře jsem si vytvořil sám.
+        </p>
+    </section>
+    <section id="projects">
+        <h2 data-key="imageProjectTitle">Galerie</h2>
+        <div class="project-grid">
+            <img src="imgs/project1-1.png" alt="">
+            <img src="imgs/project1-2.png" alt="">
+        </div>
+    </section>
+    <footer>
+        <p>© 2026 Max Bělunek</p>
+    </footer>
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFull">
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

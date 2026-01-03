@@ -21,7 +21,21 @@ const translations = {
         sendBtn: "Odeslat",
         orSpan: "--------nebo--------",
         emailPlaceholder: "vas@email.cz",
-        messagePlaceholder: "Zde napište zprávu..."
+        messagePlaceholder: "Zde napište zprávu...",
+        ProjectDesc1: "3D hra v JavaScriptu",
+        project1ScrollButton: "Více o projektu ↓",
+        aboutProjectTitle: "O projektu",
+        aboutProjectP1_1: "Moje školní práce v JavaScriptu.",
+        aboutProjectP1_2: "Jedná se o jednodouchou 3D hru v naší škole Creative Hill College.",
+        aboutProjectP1_3: "Hru si můžete zahrát",
+        aboutProjectP1_31: "zde",
+        aboutProjectP1_4: "Všechnu grafiku použitou ve hře jsem si vytvořil sám.",
+        imageProjectTitle: "Galerie",
+        ProjectDesc2: "2D hra v Unity",
+        aboutProjectP2_1: "Školní práce mě a mých kamarádů v Unity.",
+        aboutProjectP2_2: "Jedná se o 2D hru podle filmu Anihilace.",
+        aboutProjectP2_3: "Hra je momentálně ve vývoji, který můžete sledovat",
+        emptySpace: "Zatím tu nic není...",
     },
     'en': {
         themeBtnLight: "Light Mode",
@@ -42,7 +56,21 @@ const translations = {
         sendBtn: "Send",
         orSpan: "--------or--------",
         messagePlaceholder: "Write your message here...",
-        emailPlaceholder: "your@email.com"
+        emailPlaceholder: "your@email.com",
+        ProjectDesc1: "3D game in JavaScript",
+        project1ScrollButton: "More about project ↓",
+        aboutProjectTitle: "About project",
+        aboutProjectP1_1: "My school work in JavaScript",
+        aboutProjectP1_2: "This is a simple 3D game set in our school, Creative Hill College.",
+        aboutProjectP1_3: "You can play the game",
+        moreInfo: "here",
+        aboutProjectP1_4: "I created all the graphics used in the game myself.",
+        imageProjectTitle: "Gallery",
+        ProjectDesc2: "2D game in Unity",
+        aboutProjectP2_1: "School work by me and my friends in Unity.",
+        aboutProjectP2_2: "This is a 2D game based on the movie Annihilation.",
+        aboutProjectP2_3: "The game is currently in development, which you can follow",
+        emptySpace: "Nothing here just yet...",
     }
 };
 
@@ -93,3 +121,23 @@ toggleBtn.addEventListener('click', () => {
   localStorage.setItem('theme', newTheme);
 });
 
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("imgFull");
+const closeBtn = document.querySelector(".close-modal");
+
+document.querySelectorAll('.project-grid img').forEach(img => {
+    img.addEventListener('click', () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    });
+});
+
+closeBtn.onclick = () => {
+    modal.style.display = "none";
+};
+
+modal.onclick = (event) => {
+    if (event.target === modal || event.target === closeBtn) {
+        modal.style.display = "none";
+    }
+};
