@@ -11,7 +11,7 @@
   --heading-color: #93c5fd;
   --shadow: rgba(0, 0, 0, 0.4);
   --bg-nav: #0c1329c1;
-  --gradient-main: #0401a1;
+  --gradient-main: #0c1f5c;
 }
 
 [data-theme="light"]{
@@ -23,7 +23,7 @@
   --text-muted: #64748b;
   --accent-primary: #2563eb;
   --accent-secondary: #1d4ed8;
-  --heading-color: #1e40af;
+  --heading-color: #071545;
   --shadow: rgba(0, 0, 0, 0.1);
   --bg-nav: #ffffffc1;
   --gradient-main: #2988e0;
