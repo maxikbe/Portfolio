@@ -3,6 +3,7 @@ const langBtn = document.getElementById('language-change');
 
 const translations = {
     'cz': {
+        aboutMe: "Student & Herní vývojář",
         themeBtnLight: "Světlý Režim",
         themeBtnDark: "Tmavý Režim",
         heroBtn: "Více o mně ↓",
@@ -38,6 +39,7 @@ const translations = {
         emptySpace: "Zatím tu nic není...",
     },
     'en': {
+        aboutMe: "Student & Game Developer",
         themeBtnLight: "Light Mode",
         themeBtnDark: "Dark Mode",
         heroBtn: "More about me ↓",
