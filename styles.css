@@ -44,6 +44,19 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+.heroImageHolder{
+  margin-top: -80px;
+  width: 100vw;
+  position: relative;
+  top: 70px;
+  height: 50vh;
+}
+
+.heroImageName{
+  width: 100vw;
+  height: 50vh;
+}
+
 .navigation-bar{
   padding: 10px;
   display: flex;
