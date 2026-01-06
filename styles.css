@@ -67,7 +67,7 @@ body {
   height: 10vh;
   background: var(--bg-nav);
   z-index: 1000;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
 }
 
 .navigation-bar a, .navigation-bar button{
