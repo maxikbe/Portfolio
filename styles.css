@@ -46,14 +46,14 @@ body {
 
 .heroImageHolder{
   margin-top: -80px;
-  width: 100vw;
+  width: 100%;
   position: relative;
   top: 70px;
   height: 50vh;
 }
 
 .heroImageName{
-  width: 100vw;
+  width: 100%;
   height: 50vh;
 }
 
