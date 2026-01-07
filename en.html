@@ -10,18 +10,23 @@
 
     <meta property="og:description" content="Explore my projects in Unity and JavaScript." />
     <meta property="og:url" content="https://belunekmax.me/en.html" />
+    <meta property="og:image" content="https://belunekmax.me/preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="manifest" href="site.webmanifest">
+
     <meta name="description" content="Portfolio of a student and game developer.">
     <link rel="alternate" hreflang="cs" href="https://belunekmax.me/index.html" />
     <link rel="alternate" hreflang="en" href="https://belunekmax.me/en.html" />
     <link rel="alternate" hreflang="x-default" href="https://belunekmax.me/index.html" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="manifest" href="site.webmanifest">
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -62,12 +67,12 @@
         <h2>Contact</h2>
         <form action="https://formspree.io/f/mwvkdaag" method="POST" class="contact-form">
             <div class="form-group">
-                <label>Your email:</label>
-                <input type="email" name="email" required placeholder="your@email.com">
+                <label for="email-field">Your email:</label>
+                <input type="email" id="email-field" name="email" required placeholder="your@email.com">
             </div>
             <div class="form-group">
-                <label>Your message:</label>
-                <textarea name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                <label for="message-input">Your message:</label>
+                <textarea id="message-input" name="message" rows="5" required placeholder="Write your message here..."></textarea>
             </div>
             <button type="submit" class="submit-btn">Send</button>
         </form>
