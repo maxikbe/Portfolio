@@ -110,20 +110,44 @@ body {
 }
 
 .hero a {
-  margin-top: 2rem;
-  padding: 0.8rem 1.6rem;
-  border: none;
-  border-radius: 10px;
-  background: #020617;
+  padding: 2px;
   color: #e5e7eb;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
+}
+
+/*/.hero a {
+  text-decoration: none;
+  color: inherit;
+
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.1),
+    rgb(143, 183, 232, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 0% 3px;
+  transition: background-size 400ms ease-in-out;
 }
 
 .hero a:hover {
-  transform: translateY(-2px);
-  background: #020617cc;
+  background-size: 100% 3px;
+  background-position: 0% 100%;
+}/*/
+
+.heroAholder{
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.11);
+  border: solid var(--gradient-main) 1px;
+  border-radius: 22px;
+  padding: 8px 18px;
+}
+
+.heroAholder:hover{
+  transform: translateY(-2.5px);
+  transition: 250ms;
+  background: rgba(255, 255, 255, 0.16);;
+  border: solid var(--gradient-main) 1.5px;
 }
 
 section {
@@ -181,15 +205,12 @@ h2 {
 .project a:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(59, 130, 246, 0.5);
+  text-decoration: underline;
 }
 
 a {
   color: var(--accent-primary);
   text-decoration: none;
-}
-
-.project a:hover, .hero a:hover{
-  text-decoration: underline;
 }
 
 footer {
