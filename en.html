@@ -30,6 +30,10 @@
     <link rel="alternate" hreflang="en" href="https://belunekmax.me/en.html" />
     <link rel="alternate" hreflang="x-default" href="https://belunekmax.me/index.html" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -42,10 +46,10 @@
         </div>
     </nav>
     <header class="hero">
-        <h1  class="heroImageHolder">
+        <h1 class="heroImageHolder">
             <picture>
                 <source srcset="videos/MB-WhiteNew.webp" type="image/webp">
-                <img src="videos/MB-White.png" alt="Max Bělunek" class="heroImageName">
+                <img src="videos/MB-White.png" alt="Max Bělunek" class="heroImageName" fetchpriority="high" loading="eager">
             </picture>
         </h1>
         <p>Student & Game Developer</p>

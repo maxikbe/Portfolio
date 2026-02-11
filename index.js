@@ -4,19 +4,22 @@ const htmlElement = document.documentElement;
 
 if (langBtn) {
     langBtn.addEventListener('click', () => {
-        let currentPage = window.location.pathname.split("/").pop() || "index.html";
-        let newPage = "";
+        document.body.style.opacity = '0';
+        setTimeout(() => {
+            let currentPage = window.location.pathname.split("/").pop() || "index.html";
+            let newPage = "";
 
-        if (currentPage.includes("_en.html")) {
-            newPage = currentPage.replace("_en.html", ".html");
-        } else if (currentPage === "en.html") {
-            newPage = "index.html";
-        } else if (currentPage === "index.html" || currentPage === "") {
-            newPage = "en.html";
-        } else {
-            newPage = currentPage.replace(".html", "_en.html");
-        }
-        window.location.href = newPage;
+            if (currentPage.includes("_en.html")) {
+                newPage = currentPage.replace("_en.html", ".html");
+            } else if (currentPage === "en.html") {
+                newPage = "index.html";
+            } else if (currentPage === "index.html" || currentPage === "") {
+                newPage = "en.html";
+            } else {
+                newPage = currentPage.replace(".html", "_en.html");
+            }
+            window.location.href = newPage;
+        }, 300);
     });
 }
 

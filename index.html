@@ -16,6 +16,8 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
 
+    <link rel="preload" as="image" href="videos/MB-WhiteNew.webp" type="image/webp">
+
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -25,10 +27,13 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="manifest" href="site.webmanifest">
 
-    <meta name="description" content="Portfolio studenta a herního vývojáře.">
     <link rel="alternate" hreflang="cs" href="https://belunekmax.me/index.html" />
     <link rel="alternate" hreflang="en" href="https://belunekmax.me/en.html" />
     <link rel="alternate" hreflang="x-default" href="https://belunekmax.me/index.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <link rel="stylesheet" href="styles.css" />
 </head>
@@ -42,10 +47,10 @@
         </div>
     </nav>
     <header class="hero">
-        <h1  class="heroImageHolder">
+        <h1 class="heroImageHolder">
             <picture>
                 <source srcset="videos/MB-WhiteNew.webp" type="image/webp">
-                <img src="videos/MB-White.png" alt="Max Bělunek" class="heroImageName">
+                <img src="videos/MB-White.png" alt="Max Bělunek" class="heroImageName" fetchpriority="high" loading="eager">
             </picture>
         </h1>
         <p>Student & Herní vývojář</p>
