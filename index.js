@@ -7,25 +7,27 @@ if (langBtn) {
         document.body.style.opacity = '0';
         setTimeout(() => {
             let path = window.location.pathname;
-            // Get the last part of the path and remove trailing slashes
-            let currentPage = path.split("/").pop().replace(/\/$/, "") || "index.html";
+            
+            // Clean the path: remove trailing slashes and get the last part
+            let segments = path.split("/").filter(s => s.length > 0);
+            let currentPage = segments.pop() || "index.html";
             let newPage = "";
 
-            // 1. Handle English landing page (matches "en" or "en.html")
-            if (currentPage === "en.html" || currentPage === "en") {
+            // 1. If we are on the English landing page (/en or /en.html)
+            if (currentPage === "en" || currentPage === "en.html") {
                 newPage = "index.html";
             } 
-            // 2. Handle Czech landing page (matches "index", "index.html", or empty)
-            else if (currentPage === "index.html" || currentPage === "index" || currentPage === "") {
+            // 2. If we are on the Czech landing page (/ or /index.html)
+            else if (currentPage === "index.html" || currentPage === "index") {
                 newPage = "en.html";
             } 
-            // 3. Handle project sub-pages with _en
+            // 3. Handle project sub-pages (e.g., TheShimmerUnity2D_en)
             else if (currentPage.includes("_en")) {
+                // Go from English project back to Czech
                 newPage = currentPage.replace("_en", "");
-                // Ensure it still ends in .html if the original didn't have it
                 if (!newPage.endsWith(".html")) newPage += ".html";
             } 
-            // 4. Fallback for Czech project pages
+            // 4. Fallback: Go from Czech project to English
             else {
                 newPage = currentPage.replace(".html", "") + "_en.html";
             }
