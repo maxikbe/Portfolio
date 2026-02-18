@@ -6,18 +6,30 @@ if (langBtn) {
     langBtn.addEventListener('click', () => {
         document.body.style.opacity = '0';
         setTimeout(() => {
-            let currentPage = window.location.pathname.split("/").pop() || "index.html";
+            let path = window.location.pathname;
+            // Get the last part of the path and remove trailing slashes
+            let currentPage = path.split("/").pop().replace(/\/$/, "") || "index.html";
             let newPage = "";
 
-            if (currentPage.includes("_en.html")) {
-                newPage = currentPage.replace("_en.html", ".html");
-            } else if (currentPage === "en.html") {
+            // 1. Handle English landing page (matches "en" or "en.html")
+            if (currentPage === "en.html" || currentPage === "en") {
                 newPage = "index.html";
-            } else if (currentPage === "index.html" || currentPage === "") {
+            } 
+            // 2. Handle Czech landing page (matches "index", "index.html", or empty)
+            else if (currentPage === "index.html" || currentPage === "index" || currentPage === "") {
                 newPage = "en.html";
-            } else {
-                newPage = currentPage.replace(".html", "_en.html");
+            } 
+            // 3. Handle project sub-pages with _en
+            else if (currentPage.includes("_en")) {
+                newPage = currentPage.replace("_en", "");
+                // Ensure it still ends in .html if the original didn't have it
+                if (!newPage.endsWith(".html")) newPage += ".html";
+            } 
+            // 4. Fallback for Czech project pages
+            else {
+                newPage = currentPage.replace(".html", "") + "_en.html";
             }
+
             window.location.href = newPage;
         }, 300);
     });
