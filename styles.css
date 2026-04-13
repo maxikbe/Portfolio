@@ -39,6 +39,16 @@
   scroll-behavior: smooth;
 }
 
+/* Keep the image as it is for Dark Mode */
+[data-theme="dark"] .heroImageName {
+    filter: none;
+}
+
+/* In Light Mode, invert the colors so White becomes Black */
+[data-theme="light"] .heroImageName {
+    filter: invert(1);
+}
+
 body {
   background: var(--bg-main);
   color: var(--text-main);
